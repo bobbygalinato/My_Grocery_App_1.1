@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listAllFragment">
+
+    <fragment
+        android:id="@+id/listAllFragment"
+        android:name="com.example.mygroceryapp.fragments.ListAllFragment"
+        android:label="list all records"
+        tools:layout="@layout/fragment_list_all" >
+        <action
+            android:id="@+id/action_listAllFragment_to_addRecordFragment"
+            app:destination="@id/addRecordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecordFragment"
+        android:name="com.example.mygroceryapp.fragments.ModifyRecordFragment"
+        android:label="add/modify record"
+        tools:layout="@layout/fragment_modify_record" >
+        <action
+            android:id="@+id/action_addRecordFragment_to_listAllFragment"
+            app:destination="@id/listAllFragment" />
+        <argument
+            android:name="currentItem"
+            app:argType="com.example.mygroceryapp.data.GroceryItemsTable"
+            app:nullable="true" />
+        <argument
+            android:name="mSwitch"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.mygroceryapp.fragments.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_startFragment_to_listAllFragment"
+            app:destination="@id/listAllFragment" />
+    </fragment>
+</navigation>

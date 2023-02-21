@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#0DB9CF"
+    android:backgroundTintMode="screen"
+    tools:context=".fragments.ModifyRecordFragment">
+
+    <TextView
+        android:id="@+id/groceryItemTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Grocery Item"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextGroceryItem"
+        android:layout_width="355dp"
+        android:layout_height="49dp"
+        android:backgroundTint="#08C8E1"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:shadowColor="#00BCD4"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/groceryItemTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/HomeStorageLocTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Location"
+        app:layout_constraintBottom_toTopOf="@+id/editTextHomeStorageLocation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.034"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGroceryItem"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextHomeStorageLocation"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="12dp"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextGroceryAisleNumber"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGroceryItem"
+        app:layout_constraintVertical_bias="0.095" />
+
+    <TextView
+        android:id="@+id/GroceryAisleOrShelfTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Grocery Aisle"
+        app:layout_constraintBottom_toTopOf="@+id/editTextGroceryAisleNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.643"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGroceryItem"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextGroceryAisleNumber"
+        android:layout_width="127dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="72dp"
+        android:backgroundTintMode="add"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGroceryItem"
+        app:layout_constraintVertical_bias="0.102" />
+
+    <TextView
+        android:id="@+id/brandTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brand"
+        app:layout_constraintBottom_toTopOf="@+id/editTextBrand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.036"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Generic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGroceryAisleNumber"
+        app:layout_constraintVertical_bias="0.069" />
+
+    <TextView
+        android:id="@+id/UnitPriceTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit Price"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUnitPrice"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGroceryAisleNumber"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextUnitPrice"
+        android:layout_width="89dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="12dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:textAlignment="textEnd"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBrand"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="per"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUnitAmount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.438"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHomeStorageLocation"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextUnitAmount"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="68dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/editTextUnitPrice"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBrand"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <TextView
+        android:id="@+id/UnitOfMeasureTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unit of Measure"
+        app:layout_constraintBottom_toTopOf="@+id/editTextUnitOfMeasure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.724"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextHomeStorageLocation"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/editTextUnitOfMeasure"
+        android:layout_width="102dp"
+        android:layout_height="45dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.033"
+        app:layout_constraintStart_toEndOf="@+id/editTextUnitAmount"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBrand"
+        app:layout_constraintVertical_bias="0.065" />
+
+    <Button
+        android:id="@+id/buttonAddModify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add/Modify"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextUnitOfMeasure" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
